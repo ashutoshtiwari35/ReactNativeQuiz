@@ -1,20 +1,34 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { StyleSheet, Text, View, Linking, Button } from 'react-native';
+import MyStack from './navigation';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+     <NavigationContainer>
+       <MyStack />
+     </NavigationContainer>
+    // <View>
+    //   <Text style={styles.resume}>
+    //     Download my
+    //     <Text> </Text>
+    //     <Text
+    //       style={styles.link1}
+    //       onPress={() =>
+    //         Linking.openURL("https://www.vipulsingh.in.net/VipulResume.pdf")
+    //       }
+    //     >
+    //       resume
+    //     </Text>
+    //     <Text> </Text>
+    //     from here.
+    //   </Text>
+    // </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: 40,
+    paddingHorizontal: 16,
   },
 });
