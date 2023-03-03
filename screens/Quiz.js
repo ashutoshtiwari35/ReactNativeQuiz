@@ -47,7 +47,6 @@ const Quiz = ({ navigation }) => {
   };
 
   const handleSelectedOption = (_option) => {
-    console.log(_option);
     if (_option === qus[ques].correct_answer) {
       setScore(score + 10);
       setShowRightAnswer(true);
